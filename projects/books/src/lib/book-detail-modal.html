@@ -1,0 +1,49 @@
+<!-- Backdrop – lighter & perfectly centered -->
+<div
+  class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+  (click)="closeModal()"
+>
+  <!-- Modal card – true center, responsive, clean look -->
+  <div
+    class="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+    (click)="$event.stopPropagation()"
+    role="dialog"
+    aria-modal="true"
+  >
+    <!-- Header with close button -->
+    <div class="flex justify-between items-center p-6 border-b border-gray-100">
+      <h2 class="text-2xl font-bold text-gray-900">Book Details</h2>
+      <button
+        type="button"
+        (click)="closeModal()"
+        class="text-gray-400 hover:text-gray-600 text-3xl leading-none transition"
+        aria-label="Close modal"
+      >
+        ×
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6">
+      @if (book$ | async; as book) {
+        <div class="space-y-5">
+          <h3 class="text-2xl font-semibold text-gray-800">{{ book.title }}</h3>
+          <div class="text-gray-600 space-y-3">
+            <p>
+              <span class="font-medium text-gray-900">Author:</span>
+              {{ book.author }}
+            </p>
+            <p>
+              <span class="font-medium text-gray-900">Category:</span>
+              {{ book.category }}
+            </p>
+          </div>
+        </div>
+      } @else {
+        <div class="py-16 text-center">
+          <p class="text-gray-500">Loading book details...</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

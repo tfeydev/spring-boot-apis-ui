@@ -6,6 +6,13 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "baseUrl": ".",
+    "paths": {
+      "@spring-boot-apis-ui/books": ["projects/books/src/lib/books.ts"],
+      // "@spring-boot-apis-ui/books-continued": ["projects/books-continued/src/index.ts"],
+      // "@spring-boot-apis-ui/spring-boot-rest-security": ["projects/spring-boot-rest-security/src/index.ts"],
+      // "@spring-boot-apis-ui/todos": ["projects/todos/src/index.ts"]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -21,5 +28,43 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/dashboard/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/dashboard/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/layout/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/layout/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/books/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/books/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/books-continued/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/books-continued/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/spring-boot-rest-security/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/spring-boot-rest-security/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/todos/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/todos/tsconfig.spec.json"
+    }
+  ]
 }

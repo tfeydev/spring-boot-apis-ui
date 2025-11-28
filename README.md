@@ -22,7 +22,8 @@ This project replaces the course’s Swagger UI with a clean, responsive, real-w
 - 🧭 Dashboard shell with navigation  
 - 📚 Lazy-loaded `/books` route  
 - 📱 Responsive Tailwind table with hover  
-- 🔄 Real-time data from Spring Boot backend  
+- 🔄 Real-time data from Spring Boot backend 
+- 📖 Book detail modal with transparent backdrop (click outside to close)
 
 ---
 
